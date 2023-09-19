@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animation Playground</title>
+    <style>
+
+      #element1:hover {
+        background: hotpink;
+        animation-name: spin;
+        animation-duration: 3s;
+        animation-fill-mode: both;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      @keyframes spin{
+        from{ transform: rotateZ(0)}
+        to{ transform: rotateZ(360deg)}
+      }
+
+      #element2 {
+        /* Add element 2 animations here */
+        animation-fill-mode: both;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+      }
+
+      #element2.clicked {
+        animation-name: boomerang;
+        animation-duration: 3s;
+      }
+
+      @keyframes boomerang{
+        from{ transform: translateY(0) rotateZ(0)}
+        to{ transform: translateY(500px) rotateZ(360deg)}
+      }
+
+      #element3 {
+        /* Add element 3 animations here */
+        animation-name: disappear;
+        animation-duration: 10s;
+      }
+
+      @keyframes disappear{
+        0%{ transform: translateY(0)}
+        50%{ transform: translateY(300px) scale(1,1)}
+        60%{ transform: translateY(350px) scale(0,0)}
+        65%{ transform: translateY(0) scale(1,1) translateX(500px)}
+        100%{ transform: translateX(0)}
+      }
+
+      .animated-element {
+        width: 100px;
+        height: 100px;
+        background-color: #53baff;
+        margin: 20px;
+        display: inline-flex; /* Use flex to center text vertically */
+        align-items: center; /* Center vertically */
+        justify-content: center; /* Center horizontally */
+        text-align: center; /* Center text horizontally */
+
+        /* You can add animation/transition code to all elements here */
+      }
+
+      body {
+        background-color: #fff4cf;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Animation Playground</h1>
+    <div class="animated-element" id="element1">Hover on me!</div>
+
+    <div class="animated-element" id="element2">Click on me!</div>
+
+    <div class="animated-element" id="element3">I move!</div>
+
+    <!-- You can add more elements here -->
+
+    <script>
+      // JavaScript for adding interactivity (if needed)
+      
+      const element2 = document.getElementById("element2");
+      element.addEventListener("click", (event) => {
+        event.element2.classList.toggle("clicked");
+      });
+
+      // For example: if you want to add a class when an element gets clicked, use code similar to:
+      // const elementX = document.getElementById("elementX");
+      // elementX.addEventListener("click", () => {
+      // elementX.classList.toggle("clicked"); // Adds "clicked" class if it's not there, otherwise it removes it
+      // });
+    </script>
+  </body>
+</html>
