@@ -25,6 +25,7 @@
         border-width: 2px;
         border-color: black;
         border-radius: 50%;
+        animation-name: ball_sway 2s ease-in-out 0s infinite;
       }
       .ball:nth-child(1) {
         transform: translateX(-56px);
@@ -39,18 +40,29 @@
       .tether {
         position: absolute;
         width: 2px;
-        height: 75px;
+        height: 100px;
         background: black;
-        transform: translateY(-50px)
+        transform: translateY(-64px)
       }
       .tether:nth-child(2) {
-        transform: translateX(28px) translateY(-50px);
+        transform: translateX(28px) translateY(-64px);
       }
       .tether:nth-child(4) {
-        transform: translateX(-28px) translateY(-50px);
+        transform: translateX(-28px) translateY(-64px);
       }
       .tether:nth-child(6) {
-        transform: translateX(-56px) translateY(-50px);
+        transform: translateX(-56px) translateY(-64px);
+      }
+      @keyframes ball_sway {
+        0% {
+            transform: rotateZ(10deg) translateX(-10px);
+        }
+        50% {
+            transform: rotateZ(10deg) translateX(-10px);
+        }
+        100% {
+            transform: rotateZ(10deg) translateX(-10px);
+        }
       }
     </style>
   </head>
