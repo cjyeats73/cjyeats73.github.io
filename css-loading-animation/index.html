@@ -25,7 +25,7 @@
         border-width: 2px;
         border-color: black;
         border-radius: 50%;
-        animation-name: ball_sway 2s ease-in-out 0s infinite;
+        animation: ball_sway 4s ease-in-out 0s infinite;
       }
       .ball:nth-child(1) {
         transform: translateX(-56px);
@@ -36,13 +36,34 @@
       .ball:nth-child(5) {
         transform: translateX(28px);
       }
+      .ball:nth-child(7) {
+
+      }
+      @keyframes ball_sway {
+        0% {
+            transform: translateX(0px) rotateZ(0deg);
+        }
+        25% {
+            transform: translateX(-10px) rotateZ(10deg);
+        }
+        50% {
+            transform: translateX(0px) rotateZ(0deg);
+        }
+        75% {
+            transform: translateX(10px) rotateZ(10deg);
+        }
+        100% {
+            transform: translateX(0px) rotateZ(0deg);
+        }
+      }
 
       .tether {
         position: absolute;
         width: 2px;
         height: 100px;
         background: black;
-        transform: translateY(-64px)
+        transform: translateY(-64px);
+        animation: tether_sway 4s ease-in-out 0s infinite;
       }
       .tether:nth-child(2) {
         transform: translateX(28px) translateY(-64px);
@@ -53,17 +74,27 @@
       .tether:nth-child(6) {
         transform: translateX(-56px) translateY(-64px);
       }
-      @keyframes ball_sway {
+      .tether:nth-child(8) {
+
+      }
+      @keyframes tether_sway {
         0% {
-            transform: rotateZ(10deg) translateX(-10px);
+            transform: translateY(-64px) translateX(0px) rotateZ(0deg);
+        }
+        25% {
+            transform: translateY(-64px) translateX(-10px) rotateZ(0.9deg);
         }
         50% {
-            transform: rotateZ(10deg) translateX(-10px);
+            transform: translateY(-64px) translateX(0px) rotateZ(0deg);
+        }
+        75% {
+            transform: translateY(-64px) translateX(10px) rotateZ(0.9deg);
         }
         100% {
-            transform: rotateZ(10deg) translateX(-10px);
+            transform: translateY(-64px) translateX(0px) rotateZ(0deg);
         }
       }
+      
     </style>
   </head>
   <body>
