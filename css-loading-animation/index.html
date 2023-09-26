@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Colten Yeats's CSS Loading Animation</title>
+    <style>
+      body{
+        background: bisque;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* This centers vertically */
+        perspective: 1000px; /* Adjust the perspective depth */
+      }
+
+      .ball {
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        background: white;
+        border-style: solid;
+        border-width: 2px;
+        border-color: black;
+        border-radius: 50%;
+      }
+      .ball:nth-child(1) {
+        transform: translateX(-56px);
+      }
+      .ball:nth-child(3) {
+        transform: translateX(-28px);
+      }
+      .ball:nth-child(5) {
+        transform: translateX(28px);
+      }
+
+      .tether {
+        position: absolute;
+        width: 2px;
+        height: 75px;
+        background: black;
+        transform: translateY(-50px)
+      }
+      .tether:nth-child(2) {
+        transform: translateX(28px) translateY(-50px);
+      }
+      .tether:nth-child(4) {
+        transform: translateX(-28px) translateY(-50px);
+      }
+      .tether:nth-child(6) {
+        transform: translateX(-56px) translateY(-50px);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Loading Animation</h1>
+    <div class="container">
+            <div class="ball"></div>
+            <div class="tether"></div>
+            <div class="ball"></div>
+            <div class="tether"></div>
+            <div class="ball"></div>
+            <div class="tether"></div>
+            <div class="ball"></div>
+            <div class="tether"></div>
+      </div>
+    </div>
+  </body>
+</html>
