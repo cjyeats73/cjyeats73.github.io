@@ -6,7 +6,7 @@
 <style>
 	.chassis {
 		transform-origin: center;
-		animation: unsteady-bounce 2s linear infinite;
+		animation: unsteady-bounce 0.5s linear infinite;
 	}
 	@keyframes unsteady-bounce {
 		0%{transform: rotateZ(0deg);}
