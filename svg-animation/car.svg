@@ -10,9 +10,9 @@
 	}
 	@keyframes unsteady-bounce {
 		0%{transform: rotateZ(0deg);}
-		25%{transform: rotateZ(10deg);}
+		25%{transform: rotateZ(45deg);}
 		50%{transform: rotateZ(0deg);}
-		75%{transform: rotateZ(-10deg);}
+		75%{transform: rotateZ(-45deg);}
 		100%{transform: rotateZ(0deg);}
 	}
     .car {
