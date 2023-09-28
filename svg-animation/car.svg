@@ -6,13 +6,13 @@
 <style>
 	.chassis {
 		transform-origin: center;
-		animation: unsteady-bounce 0.5s linear infinite;
+		animation: unsteady-bounce 0.4s linear infinite;
 	}
 	@keyframes unsteady-bounce {
 		0%{transform: rotateZ(0deg);}
-		25%{transform: rotateZ(5deg);}
+		25%{transform: rotateZ(10deg);}
 		50%{transform: rotateZ(0deg);}
-		75%{transform: rotateZ(-5deg);}
+		75%{transform: rotateZ(-10deg);}
 		100%{transform: rotateZ(0deg);}
 	}
     .car {
