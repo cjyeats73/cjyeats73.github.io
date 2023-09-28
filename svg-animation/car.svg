@@ -4,23 +4,49 @@
 <svg fill="#000000" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 511 511" xml:space="preserve">
 <style>
-	.wheel {
-		animation wheel-spin 1s linear infinite
+	.chassis {
+		transform-origin: center;
+		animation: unsteady-bounce 2s linear infinite;
 	}
-	@keyframes wheel-spin {
-		transform: rotateZ(360deg)
+	@keyframes unsteady-bounce {
+		0%{transform: rotateZ(0deg);}
+		25%{transform: rotateZ(5deg);}
+		50%{transform: rotateZ(0deg);}
+		75%{transform: rotateZ(-5deg);}
+		100%{transform: rotateZ(0deg);}
 	}
+    .car {
+        animation: bounce 1s ease-in-out infinite;
+    }
+    @keyframes bounce {
+        0%{transform: translateY(0px);}
+        50%{transform: translateY(5px);}
+        100%{transform: translateY(0px);}
+    }
+    #left-wheel {
+        transform-origin: 95px 390px;
+    }
+    #right-wheel {
+        transform-origin: 416px 390px;
+    }
+    .wheel {
+        animation: wheel-spin 1s linear infinite;
+    }
+    @keyframes wheel-spin {
+        0%{transform: rotateZ(0deg);}
+        100%{transform: rotateZ(360deg);}
+    }
 </style>
 <g class="car">
-	<path class="wheel" d="M119.5,384c-4.142,0-7.5,3.358-7.5,7.5c0,9.098-7.402,16.5-16.5,16.5S79,400.598,79,391.5S86.402,375,95.5,375
+	<path class="wheel" id="left-wheel" d="M119.5,384c-4.142,0-7.5,3.358-7.5,7.5c0,9.098-7.402,16.5-16.5,16.5S79,400.598,79,391.5S86.402,375,95.5,375
 		c4.142,0,7.5-3.358,7.5-7.5s-3.358-7.5-7.5-7.5C78.131,360,64,374.131,64,391.5S78.131,423,95.5,423s31.5-14.131,31.5-31.5
 		C127,387.358,123.642,384,119.5,384z"/>
-	<path class="wheel" d="M439.5,384c-4.142,0-7.5,3.358-7.5,7.5c0,9.098-7.402,16.5-16.5,16.5s-16.5-7.402-16.5-16.5s7.402-16.5,16.5-16.5
+	<path class="wheel" id="right-wheel"d="M439.5,384c-4.142,0-7.5,3.358-7.5,7.5c0,9.098-7.402,16.5-16.5,16.5s-16.5-7.402-16.5-16.5s7.402-16.5,16.5-16.5
 		c4.142,0,7.5-3.358,7.5-7.5s-3.358-7.5-7.5-7.5c-17.369,0-31.5,14.131-31.5,31.5s14.131,31.5,31.5,31.5s31.5-14.131,31.5-31.5
 		C447,387.358,443.642,384,439.5,384z"/>
 	<path d="M447.5,256h-16c-4.142,0-7.5,3.358-7.5,7.5s3.358,7.5,7.5,7.5h16c4.142,0,7.5-3.358,7.5-7.5S451.642,256,447.5,256z"/>
 	<path d="M327.5,320h-144c-4.142,0-7.5,3.358-7.5,7.5s3.358,7.5,7.5,7.5h144c4.142,0,7.5-3.358,7.5-7.5S331.642,320,327.5,320z"/>
-	<path d="M471.513,224H371.038l-68.199-82.764c-0.077-0.094-0.157-0.186-0.239-0.275c-6.198-6.817-14.583-11.219-23.6-12.537V95.5
+	<path class="chassis" d="M471.513,224H371.038l-68.199-82.764c-0.077-0.094-0.157-0.186-0.239-0.275c-6.198-6.817-14.583-11.219-23.6-12.537V95.5
 		c0-17.369-14.131-31.5-31.5-31.5H215v-0.5c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5V64h-41v-0.5c0-4.142-3.358-7.5-7.5-7.5
 		s-7.5,3.358-7.5,7.5V64h-32.5C94.131,64,80,78.131,80,95.5v32.537c-13.185,0.383-25.202,7.168-32.316,18.347
 		c-0.068,0.107-0.134,0.217-0.197,0.328L6.061,219.793C2.095,226.095,0,233.356,0,240.805V327.5
