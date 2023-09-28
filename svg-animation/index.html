@@ -4,8 +4,16 @@
 <svg fill="#000000" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 511 511" xml:space="preserve">
 <style>
+    .car {
+        animation: bounce 1s ease-in-out infinite;
+    }
+    @keyframes bounce {
+        0%{transform: translateY(0px);}
+        50%{transform: translateY(5px);}
+        100%{transform: translateY(0px);}
+    }
     #left-wheel {
-        transform-origin: 95px 392px;
+        transform-origin: 95px 390px;
     }
     #right-wheel {
         transform-origin: 416px 390px;
