@@ -3,7 +3,7 @@
   <defs>
     <style>
         .note {
-            animation: entry 1s ease-out;
+            animation: entry 1s cubic-bezier(.48,1.25,1,.99);
         }
         @keyframes entry {
             0%{
@@ -30,7 +30,7 @@
       .cls-3 {
         fill: url(#radial-gradient);
         opacity: .5;
-        animation: backdrop-entry 1s ease-out
+        animation: backdrop-entry 1s cubic-bezier(.48,1.25,1,.99);
       }
       @keyframes backdrop-entry {
         0%{
