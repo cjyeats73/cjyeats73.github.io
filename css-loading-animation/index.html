@@ -15,7 +15,101 @@
         height: 100vh; /* This centers vertically */
         perspective: 1000px; /* Adjust the perspective depth */
       }
-
+      .top {
+        display: flex;
+        order: 3;
+        position: absolute;
+        background-color: darkslategray;
+        height: 20px;
+        width: 180px;
+        transform: translateX(-83px) translateY(-43px);
+      }
+      .bottom {
+        display: flex;
+        order: 3;
+        position: absolute;
+        background-color: darkslategrey;
+        margin: auto;
+        text-align: center;
+        color: white;
+        height: 50px;
+        width: 200px;
+        transform: translateX(-93px) translateY(120px);
+      }
+      .left {
+        display: flex;
+        order: 2;
+        position: absolute;
+        background-color: silver;
+        height: 145px;
+        width: 10px;
+        transform: translateX(-80px) translateY(-26px); 
+        border: solid 2px darkslategrey;
+      }
+      .right {
+        display: flex;
+        order: 2;
+        background-color: silver;
+        height: 145px;
+        width: 10px;
+        transform: translateX(80px) translateY(-26px);
+        border: solid 2px darkslategrey;
+      }
+      .cradle {
+        display: flex;
+        order: 3;
+        position: absolute;
+        
+      }
+      .pendulum {
+        transform-origin: 50% 0%;
+      }
+      #pdl1 {
+        animation: left-sway 2s linear infinite
+      }
+      #pdl2 {
+        transform: translateX(-28px);
+      }
+      #pdl3 {
+        transform: translateX(0px);
+      }
+      #pdl4 {
+        animation: right-sway 2s linear infinite
+      }
+      @keyframes left-sway {
+        0%{
+          transform: translateX(-100px) translateY(-10px) rotateZ(20deg)
+        }
+        25%{
+          transform: translateX(-56px) rotateZ(0deg)
+        }
+        50% {
+          transform: translateX(-56px) rotateZ(0deg)
+        }
+        75%{
+          transform: translateX(-56px) rotateZ(0deg)
+        }
+        100%{
+          transform: translateX(-100px) translateY(-10px) rotateZ(20deg)
+        }
+      }
+      @keyframes right-sway {
+        0%{
+          transform: translateX(28px) rotateZ(0deg)
+        }
+        25% {
+          transform: translateX(28px) rotateZ(0deg)
+        }
+        50% {
+          transform: translateX(75px) translateY(0px) rotateZ(-20deg)
+        }
+        75% {
+          transform: translateX(28px) rotateZ(0deg)
+        }
+        100%{
+          transform: translateX(28px) rotateZ(0deg)
+        }
+      }
       .ball {
         position: absolute;
         width: 25px;
@@ -25,74 +119,111 @@
         border-width: 2px;
         border-color: black;
         border-radius: 50%;
-        animation: ball_sway 4s ease-in-out 0s infinite;
       }
-      .ball:nth-child(1) {
-        transform: translateX(-56px);
+      #red {
+        animation: ball-red-change 2s linear infinite
       }
-      .ball:nth-child(3) {
-        transform: translateX(-28px);
+      #yellow{
+        animation: ball-yellow-change 2s linear infinite
       }
-      .ball:nth-child(5) {
-        transform: translateX(28px);
+      #green{
+        animation: ball-green-change 2s linear infinite
       }
-      .ball:nth-child(7) {
-
+      #blue {
+        animation: ball-blue-change 2s linear infinite
       }
-      @keyframes ball_sway {
-        0% {
-            transform: translateX(0px) rotateZ(0deg);
+      @keyframes ball-red-change {
+        0%{
+          background-color: lightcoral
         }
         25% {
-            transform: translateX(-20px) rotateZ(20deg);
+          background-color: lightcoral;
         }
         50% {
-            transform: translateX(0px) rotateZ(0deg);
+          background-color: white; 
         }
         75% {
-            transform: translateX(20px) rotateZ(20deg);
+          background-color: white;
         }
-        100% {
-            transform: translateX(0px) rotateZ(0deg);
+        76% {
+          background-color: lightcoral;
+        }
+        100%{
+          background-color: lightcoral
         }
       }
-
+      @keyframes ball-yellow-change {
+        0%{
+          background-color: white;
+        }
+        25% {
+          background-color: white;
+        }
+        30% {
+          background-color: rgb(246, 246, 98);
+        }
+        50% {
+          background-color: white; 
+        }
+        75% {
+          background-color: white;
+        }
+        80% {
+          background-color: rgb(246, 246, 98);
+        }
+        100%{
+          background-color: white;
+        }
+      }
+      @keyframes ball-green-change {
+        0%{
+          background-color: white;
+        }
+        25% {
+          background-color: white;
+        }
+        30% {
+          background-color: rgb(94, 253, 115);
+        }
+        50% {
+          background-color: white; 
+        }
+        75% {
+          background-color: white;
+        }
+        80% {
+          background-color: rgb(94, 253, 115);
+        }
+        100%{
+          background-color: white;
+        }
+      }
+      @keyframes ball-blue-change {
+        0%{
+          background-color: white;
+        }
+        25% {
+          background-color: white;
+        }
+        30% {
+          background-color: skyblue;
+        }
+        50% {
+          background-color: skyblue; 
+        }
+        75% {
+          background-color: skyblue;
+        }
+        100%{
+          background-color: white;
+        }
+      }
       .tether {
         position: absolute;
         width: 2px;
         height: 100px;
         background: black;
-        transform: translateY(-64px);
-        animation: tether_sway 4s ease-in-out 0s infinite;
-      }
-      .tether:nth-child(2) {
-        transform: translateX(28px) translateY(-64px);
-      }
-      .tether:nth-child(4) {
-        transform: translateX(-28px) translateY(-64px);
-      }
-      .tether:nth-child(6) {
-        transform: translateX(-56px) translateY(-64px);
-      }
-      .tether:nth-child(8) {
-
-      }
-      @keyframes tether_sway {
-        0% {
-            transform: translateY(-64px) translateX(0px) rotateZ(0deg);
-        }
-        25% {
-            transform: translateY(-64px) translateX(-18px) rotateZ(1.8deg);
-        }
-        50% {
-            transform: translateY(-64px) translateX(0px) rotateZ(0deg);
-        }
-        75% {
-            transform: translateY(-64px) translateX(18px) rotateZ(-1.8deg);
-        }
-        100% {
-            transform: translateY(-64px) translateX(0px) rotateZ(0deg);
-        }
+        transform: translateX(14px) translateY(-98px)
       }
       
     </style>
@@ -100,23 +231,29 @@
   <body>
     <h1>CSS Loading Animation</h1>
     <div class="container">
-            <div class="pendulum">
-                <div class="ball"></div>
-                <div class="tether"></div>
-            </div>
-            <div class="pendulum">
-                <div class="ball"></div>
-                <div class="tether"></div>
-            </div>
-            <div class="pendulum">
-                <div class="ball"></div>
-                <div class="tether"></div>
-            </div>
-            <div class="pendulum">
-                <div class="ball"></div>
-                <div class="tether"></div>
-            </div>
-            
+      <div class="support">
+        <div class="top"></div>
+        <div class="bottom">L O A D I N G . . .</div>
+        <div class="left"></div>
+        <div class="right"></div>
+      </div>
+      <div class="cradle">
+        <div class="pendulum" id="pdl1">
+            <div class="ball" id="red"></div>
+            <div class="tether"></div>
+        </div>
+        <div class="pendulum" id="pdl2">
+            <div class="ball" id="yellow"></div>
+            <div class="tether"></div>
+        </div>
+        <div class="pendulum" id="pdl3">
+            <div class="ball" id="green"></div>
+            <div class="tether"></div>
+        </div>
+        <div class="pendulum" id="pdl4">
+            <div class="ball" id="blue"></div>
+            <div class="tether"></div>
+        </div>
       </div>
     </div>
   </body>
