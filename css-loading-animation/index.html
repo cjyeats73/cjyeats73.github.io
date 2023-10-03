@@ -15,6 +15,9 @@
         height: 100vh; /* This centers vertically */
         perspective: 1000px; /* Adjust the perspective depth */
       }
+      h1{
+        font-family: Geneva, Verdana, Tahoma, sans-serif;
+      }
       .top {
         display: flex;
         order: 3;
@@ -26,12 +29,14 @@
       }
       .bottom {
         display: flex;
+        align-items: center;
+        justify-content: center;
         order: 3;
         position: absolute;
         background-color: darkslategrey;
-        margin: auto;
-        text-align: center;
         color: white;
+        font-family: Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 20px;
         height: 50px;
         width: 200px;
         transform: translateX(-93px) translateY(120px);
@@ -65,7 +70,7 @@
         transform-origin: 50% 0%;
       }
       #pdl1 {
-        animation: left-sway 2s linear infinite
+        animation: left-sway 1.5s linear infinite
       }
       #pdl2 {
         transform: translateX(-28px);
@@ -74,7 +79,7 @@
         transform: translateX(0px);
       }
       #pdl4 {
-        animation: right-sway 2s linear infinite
+        animation: right-sway 1.5s linear infinite
       }
       @keyframes left-sway {
         0%{
@@ -121,16 +126,16 @@
         border-radius: 50%;
       }
       #red {
-        animation: ball-red-change 2s linear infinite
+        animation: ball-red-change 1.5s linear infinite
       }
       #yellow{
-        animation: ball-yellow-change 2s linear infinite
+        animation: ball-yellow-change 1.5s linear infinite
       }
       #green{
-        animation: ball-green-change 2s linear infinite
+        animation: ball-green-change 1.5s linear infinite
       }
       #blue {
-        animation: ball-blue-change 2s linear infinite
+        animation: ball-blue-change 1.5s linear infinite
       }
       @keyframes ball-red-change {
         0%{
@@ -145,7 +150,7 @@
         75% {
           background-color: white;
         }
-        76% {
+        80% {
           background-color: lightcoral;
         }
         100%{
@@ -229,7 +234,7 @@
     </style>
   </head>
   <body>
-    <h1>CSS Loading Animation</h1>
+    <h1>Colten Yeats's CSS Loading Animation</h1>
     <div class="container">
       <div class="support">
         <div class="top"></div>
