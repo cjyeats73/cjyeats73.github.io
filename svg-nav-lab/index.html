@@ -1,4 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<script>
+    // Get references to the button and parent element to animate
+    const button = document.querySelector('#icon-03');
+    const bar = document.querySelector('#data-03');
+
+
+    // Event listener for the menu toggle button
+    button.addEventListener('click', () => {
+        console.log("Stuck here!!");
+        const isActive = elementToAnimate.classList.contains("active");
+        
+        if (!isActive) { 
+        // Add a class that tells CSS that the element is active
+        bar.classList.add("active")
+        } else {
+        bar.classList.remove("active")
+        }
+    });
+</script>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 332.73932 506.4458">
   <defs>
     <style>
@@ -105,25 +124,6 @@
         }
       }
     </style>
-    <script>
-        // Get references to the button and parent element to animate
-        const button = document.querySelector('#icon-03');
-        const bar = document.querySelector('#data-03');
-    
-    
-        // Event listener for the menu toggle button
-        button.addEventListener('click', () => {
-            console.log("Stuck here!!");
-            const isActive = elementToAnimate.classList.contains("active");
-            
-            if (!isActive) { 
-            // Add a class that tells CSS that the element is active
-            bar.classList.add("active")
-            } else {
-            bar.classList.remove("active")
-            }
-        });
-    </script>
   </defs>
   <g id="background">
     <g>
