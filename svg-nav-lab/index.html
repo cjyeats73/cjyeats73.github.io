@@ -66,6 +66,10 @@
         transform: scaleX(1);
       }
 
+      #data-03.active > #bar-03 {
+        transform: scaleX(1);
+      }
+
       #data-01:hover > #shadow-01 {
         opacity: 0.5;
       }
@@ -74,7 +78,19 @@
         opacity: 0.5;
       }
 
+      #data-03.active > #shadow-03 {
+        opacity: 0.5;
+      }
+
       #data-01:hover > #arrows-01 {
+        animation: swoop-in 0.4s ease-out 300ms;
+      }
+
+      #data-02:target > #arrows-02 {
+        animation: swoop-in 0.4s ease-out 300ms;
+      }
+
+      #data-03.active > #arrows-03 {
         animation: swoop-in 0.4s ease-out 300ms;
       }
 
@@ -90,6 +106,22 @@
       }
     </style>
     <script>
+        // Get references to the button and parent element to animate
+        const button = document.querySelector('#icon-03');
+        const bar = document.querySelector('#data-03');
+
+
+        // Event listener for the menu toggle button
+        button.addEventListener('click', () => {
+            const isActive = elementToAnimate.classList.contains("active");
+            
+            if (!isActive) { 
+            // Add a class that tells CSS that the element is active
+            elementToAnimate.classList.add("active")
+            } else {
+            elementToAnimate.classList.remove("active")
+            }
+        });
     </script>
   </defs>
   <g id="background">
