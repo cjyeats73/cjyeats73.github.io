@@ -109,8 +109,8 @@
         // Get references to the button and parent element to animate
         const button = document.querySelector('#icon-03');
         const bar = document.querySelector('#data-03');
-
-
+    
+    
         // Event listener for the menu toggle button
         button.addEventListener('click', () => {
             console.log("Stuck here!!");
@@ -118,9 +118,9 @@
             
             if (!isActive) { 
             // Add a class that tells CSS that the element is active
-            elementToAnimate.classList.add("active")
+            bar.classList.add("active")
             } else {
-            elementToAnimate.classList.remove("active")
+            bar.classList.remove("active")
             }
         });
     </script>
