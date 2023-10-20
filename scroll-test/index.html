@@ -38,46 +38,8 @@
         height: 1000px;
       }
     </style>
-  </head>
-  <body>
-    <div id="intro">
-        <h1>A Demostration of ScrollMagic</h1>
-        <div>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae faucibus libero. Donec consequat laoreet nunc, id rutrum libero rhoncus non. Aliquam viverra elit ut scelerisque ultrices. Mauris id urna non lorem pretium iaculis. Proin quis nunc eget tortor auctor feugiat vitae vel mauris. Proin vitae ex vel arcu suscipit dignissim sed fringilla turpis. Sed nec porta mauris. Morbi consequat tempus erat vel finibus. Maecenas mollis, neque a efficitur vehicula, nulla urna vestibulum quam, in scelerisque felis felis viverra nisl. \n
-        </div>
-        <div>
-          Aenean diam lorem, dapibus a tempus in, rutrum et nibh. In id viverra velit. Integer ultricies tempus lacus et consequat. Suspendisse consequat varius augue sed lacinia. Sed feugiat dui dui, vitae viverra tellus dictum at. Phasellus commodo libero at vulputate bibendum. Nunc non mauris est. Sed convallis, nibh vel pellentesque tempus, tortor ipsum cursus quam, eget varius turpis erat et sem. Pellentesque ac tempor odio. Nulla sit amet porta ex, ut porttitor tellus.
-        </div>
-        <div>
-          Sed arcu orci, sollicitudin vel nulla in, dignissim pretium nisi. Proin sed quam aliquet ex porta varius. Curabitur in mi vel tortor aliquet hendrerit. Donec eget erat feugiat, vulputate metus sit amet, faucibus magna. Duis lacinia dolor et nunc finibus, in sollicitudin lorem ullamcorper. Sed tristique elit nec venenatis semper. Sed purus felis, auctor vel pretium a, blandit id ante. Vivamus gravida at libero eu accumsan. Sed dui odio, tempor quis congue quis, commodo ac magna. Suspendisse sagittis leo id tortor varius posuere. Cras euismod id lacus vel ornare. Nam massa mauris, malesuada vitae nulla ut, viverra volutpat sem. Proin sagittis velit et dictum elementum. Pellentesque non metus non nulla dapibus posuere eget sed neque. Suspendisse potenti.
-        </div>
-        <div>
-          Nullam dapibus magna vel varius mollis. Vestibulum euismod luctus facilisis. Donec finibus, ligula vitae tincidunt vehicula, sapien mauris facilisis orci, non faucibus mauris metus at purus. Donec ac odio a sem consectetur posuere nec sed nunc. Etiam scelerisque aliquet eleifend. Sed vel orci et dui porta consectetur. Nunc non vestibulum erat. Curabitur in ex elit. Ut tincidunt feugiat libero. Aliquam erat volutpat.
-        </div>
-        <div>
-          Vivamus eu cursus nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam placerat elit sit amet ante mollis porttitor. Donec fringilla congue ipsum ac tincidunt. Maecenas purus ligula, consequat laoreet ligula vitae, rutrum vestibulum turpis. Nunc ultrices non odio nec lobortis. Morbi sit amet cursus velit, bibendum imperdiet lacus. Praesent finibus tortor at felis interdum, eu lacinia turpis pellentesque. Aliquam luctus commodo sem, id imperdiet enim consequat id. Pellentesque at enim ut odio laoreet scelerisque ut quis erat.
-        </div>
-    </div>
-    <div id="sticky">
-        <h2>Look at these pictures!</h2>
-        <div id="sortabutton">Cool pictures!</div>
-        <div id="gallery">
-          <img id="img1" src="isolated-happy-smiling-dog-white-background-portrait-4_1562-693.jpg.avif" alt="Smiling dog" height="400px">
-          <img id="img2" src="wii_picture.webp" alt="The Nintendo Wii console" height="400px">
-          <img id="img3" src="venice.webp" alt="A picture of Venice, Italy" height="400px">
-        </div>
-        <div id='trigger'></div>
-    </div>
-    <div id="filler"></div>
-  </body>
-  <script src="../ScrollMagic-2.0.8/scrollmagic/minified/ScrollMagic.min.js"></script>
-  <script src="../ScrollMagic-2.0.8/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
-  <script src="../anime-3.2.1/lib/anime.min.js"></script>
-  <script>
-    let controller = new ScrollMagic.Controller();
-    console.log(controller)
-  </script>
-  <script>
+    <script src="../anime-3.2.1/lib/anime.min.js"></script>
+    <script>
     let tl = anime.timeline({
       autoplay: false,
       easing: 'easeInOut',
@@ -113,6 +75,44 @@
     };
 
     tl.add(anim1).add(anim2).add(anim3).add(anim4);
+  </script>
+  </head>
+  <body>
+    <div id="intro">
+        <h1>A Demostration of ScrollMagic</h1>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae faucibus libero. Donec consequat laoreet nunc, id rutrum libero rhoncus non. Aliquam viverra elit ut scelerisque ultrices. Mauris id urna non lorem pretium iaculis. Proin quis nunc eget tortor auctor feugiat vitae vel mauris. Proin vitae ex vel arcu suscipit dignissim sed fringilla turpis. Sed nec porta mauris. Morbi consequat tempus erat vel finibus. Maecenas mollis, neque a efficitur vehicula, nulla urna vestibulum quam, in scelerisque felis felis viverra nisl. \n
+        </div>
+        <div>
+          Aenean diam lorem, dapibus a tempus in, rutrum et nibh. In id viverra velit. Integer ultricies tempus lacus et consequat. Suspendisse consequat varius augue sed lacinia. Sed feugiat dui dui, vitae viverra tellus dictum at. Phasellus commodo libero at vulputate bibendum. Nunc non mauris est. Sed convallis, nibh vel pellentesque tempus, tortor ipsum cursus quam, eget varius turpis erat et sem. Pellentesque ac tempor odio. Nulla sit amet porta ex, ut porttitor tellus.
+        </div>
+        <div>
+          Sed arcu orci, sollicitudin vel nulla in, dignissim pretium nisi. Proin sed quam aliquet ex porta varius. Curabitur in mi vel tortor aliquet hendrerit. Donec eget erat feugiat, vulputate metus sit amet, faucibus magna. Duis lacinia dolor et nunc finibus, in sollicitudin lorem ullamcorper. Sed tristique elit nec venenatis semper. Sed purus felis, auctor vel pretium a, blandit id ante. Vivamus gravida at libero eu accumsan. Sed dui odio, tempor quis congue quis, commodo ac magna. Suspendisse sagittis leo id tortor varius posuere. Cras euismod id lacus vel ornare. Nam massa mauris, malesuada vitae nulla ut, viverra volutpat sem. Proin sagittis velit et dictum elementum. Pellentesque non metus non nulla dapibus posuere eget sed neque. Suspendisse potenti.
+        </div>
+        <div>
+          Nullam dapibus magna vel varius mollis. Vestibulum euismod luctus facilisis. Donec finibus, ligula vitae tincidunt vehicula, sapien mauris facilisis orci, non faucibus mauris metus at purus. Donec ac odio a sem consectetur posuere nec sed nunc. Etiam scelerisque aliquet eleifend. Sed vel orci et dui porta consectetur. Nunc non vestibulum erat. Curabitur in ex elit. Ut tincidunt feugiat libero. Aliquam erat volutpat.
+        </div>
+        <div>
+          Vivamus eu cursus nulla. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam placerat elit sit amet ante mollis porttitor. Donec fringilla congue ipsum ac tincidunt. Maecenas purus ligula, consequat laoreet ligula vitae, rutrum vestibulum turpis. Nunc ultrices non odio nec lobortis. Morbi sit amet cursus velit, bibendum imperdiet lacus. Praesent finibus tortor at felis interdum, eu lacinia turpis pellentesque. Aliquam luctus commodo sem, id imperdiet enim consequat id. Pellentesque at enim ut odio laoreet scelerisque ut quis erat.
+        </div>
+    </div>
+    <div id="sticky">
+        <h2>Look at these pictures!</h2>
+        <div id="sortabutton">Cool pictures!</div>
+        <div id="gallery">
+          <img id="img1" src="isolated-happy-smiling-dog-white-background-portrait-4_1562-693.jpg.avif" alt="Smiling dog" height="400px">
+          <img id="img2" src="wii_picture.webp" alt="The Nintendo Wii console" height="400px">
+          <img id="img3" src="venice.webp" alt="A picture of Venice, Italy" height="400px">
+        </div>
+        <div id='trigger'></div>
+    </div>
+    <div id="filler"></div>
+  </body>
+  <script src="../ScrollMagic-2.0.8/scrollmagic/minified/ScrollMagic.min.js"></script>
+  <script src="../ScrollMagic-2.0.8/scrollmagic/minified/plugins/debug.addIndicators.min.js"></script>
+  <script>
+    let controller = new ScrollMagic.Controller();
+    console.log(controller);
 
     let scene = new ScrollMagic.Scene({
       triggerElement: "#trigger",
