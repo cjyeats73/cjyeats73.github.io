@@ -34,9 +34,6 @@
         height: 2px;
         background: black;
       }
-      #filler {
-        height: 1000px;
-      }
     </style>
     <script src="../anime-3.2.1/lib/anime.min.js"></script>
     <script>
@@ -117,8 +114,8 @@
     let scene = new ScrollMagic.Scene({
       triggerElement: "#trigger",
       triggerHook: 1,
-      duration: 1000,
-      reverse: false,
+      duration: 2000,
+      reverse: true,
     })
     
     .on('enter', function(event) {

@@ -47,6 +47,10 @@
             fill: #f0f1f1;
         }
 
+        #detector {
+            transform: translateY(-500px);
+        }
+
         [id^="bar"] {
             transform-origin: left;
             transform-box: fill-box;
@@ -56,7 +60,22 @@
 
         [id^="shadow"] {
             opacity: 0;
+            transform-origin: bottom left;
             transition: opacity 0.6s linear 100ms;
+        }
+
+        #icon-05 {
+            transform-origin: bottom left;
+            transform: scale(0.8, 0.8);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        #data-05:hover > #icon-05 {
+            transform: scale(1,1);
+        }
+
+        #data-05.active:hover > #icon-05 {
+            transform: scale(0.8,0.8);
         }
 
         #data-01:hover > #bar-01 {
@@ -71,6 +90,14 @@
             transform: scaleX(1);
         }
 
+        #data-04.active > #bar-04 {
+            transform: scaleX(1);
+        }
+
+        #data-05.active > #bar-05 {
+            transform: scale(1, 0.8);
+        }
+
         #data-01:hover > #shadow-01 {
             opacity: 0.5;
         }
@@ -83,6 +110,15 @@
             opacity: 0.5;
         }
 
+        #data-04.active > #shadow-04 {
+            opacity: 0.5;
+        }
+
+        #data-05.active > #shadow-05 {
+            opacity: 0.5;
+            transform: scale(0.8,0.8);
+        }
+
         #data-01:hover > #arrows-01 {
             animation: swoop-in 0.4s ease-out 300ms;
         }
@@ -92,6 +128,14 @@
         }
 
         #data-03.active > #arrows-03 {
+            animation: swoop-in 0.4s ease-out 300ms;
+        }
+
+        #data-04.active > #arrows-04 {
+            animation: swoop-in 0.4s ease-out 300ms;
+        }
+
+        #data-05.active > #arrows-05 {
             animation: swoop-in 0.4s ease-out 300ms;
         }
 
@@ -933,6 +977,8 @@
         <polygon class="cls-10" points="35.25392 93.7622 33.1602 93.7622 33.1602 85.8862 28.97362 95.0737 31.0684 95.0737 31.0684 102.9477 35.25392 93.7622"/>
         </g>
     </g>
+    </svg>
+    <div id="detector"></div>
     <script>
         // Get references to the button and parent element to animate
         const button = document.querySelector('#icon-03');
@@ -951,5 +997,45 @@
             }
         });
     </script>
-    </svg>
+    <script>
+        // Get references to the button and parent element to animate
+        const button2 = document.querySelector('#icon-05');
+        const bar2 = document.querySelector('#data-05');
+
+
+        // Event listener for the menu toggle button
+        button2.addEventListener('click', () => {
+            const isActive = bar2.classList.contains("active");
+            
+            if (!isActive) { 
+            // Add a class that tells CSS that the element is active
+            bar2.classList.add("active")
+            } else {
+            bar2.classList.remove("active")
+            }
+        });
+    </script>
+    <script>
+        // Scroll triggered SVG
+
+        // Get the trigger element + the element to change
+        const trigger = document.querySelector('#detector')
+        const elementToChange = document.querySelector('#data-04')
+
+        // Create the observer
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                // If element is in view, add active
+                if (entry.isIntersecting){
+                elementToChange.classList.add("active")
+                }
+                else {
+                // Otherwise, remove active
+                elementToChange.classList.remove("active")
+
+                }
+            });
+        });
+        observer.observe(trigger); 
+    </script>
 </html>
