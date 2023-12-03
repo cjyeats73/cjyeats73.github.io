@@ -6,10 +6,71 @@
     <title>CSS Animation Playground</title>
     <style>
         /* CSS goes here */
+        body {
+            overflow-y: hidden;
+        }
+
+        .container {
+            width: 100vw;
+            height: 100vh;
+        }
+        .content-wrapper {
+            width: 100vw;
+            white-space: nowrap;
+        }
+        .section {
+            width: 100vw;
+            height: 100vh;
+            display: inline-block;
+            position: relative;
+
+        }
+        .section div{
+            font-size: 100px;
+            color:black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        .one {
+            background-color: #fcf59f;
+        }
+        .two {
+            background-color: #9ffbfc;
+        }
+        .three {
+            background-color: #fc9fce;
+        }
+        .four {
+            background-color: #a4fc9f;
+        }
+        .five {
+            background-color: #fcd49f;
+        }
     </style>
   </head>
   <body>
     <!--place containers here-->
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="section one">
+                <div>One</div>
+            </div>
+            <div class="section two">
+                <div>Two</div>
+            </div>
+            <div class="section three">
+                <div>Three</div>
+            </div>
+            <div class="section four">
+                <div>Four</div>
+            </div>
+            <div class="section five">
+                <div>Five</div>
+            </div>
+        </div>
+    </div>
     <script>
         //JS goes here
     </script>
