@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CSS Animation Playground</title>
+    <!-- link for CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- link for Javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         let isButterflyOne = true;
         let canSwitch = true; // New flag to control the switch
@@ -29,258 +34,43 @@
                 }, switchDelay);
             }
         });
+
+        $(document).ready(function() {
+            const imageSlides = document.querySelectorAll('.image-slide');
+
+            // Store the animation state for all slides
+            let animationStates = {};
+
+            imageSlides.forEach((imageSlide) => {
+                imageSlide.addEventListener('mouseover', () => {
+                    // Pause the animation for all image slides
+                    imageSlides.forEach((slide) => {
+                        animationStates[slide.id] = slide.style.animationPlayState;
+                        slide.style.animationPlayState = 'paused';
+                    });
+
+                    // Enlarge the hovered image
+                    imageSlide.style.transform = 'scale(1.05)';
+                });
+
+                imageSlide.addEventListener('mouseout', () => {
+                    // Resume the animation for all image slides
+                    imageSlides.forEach((slide) => {
+                        slide.style.animationPlayState = animationStates[slide.id];
+                    });
+
+                    // Shrink the image back to its original size
+                    imageSlide.style.transform = 'scale(1)';
+                });
+            });
+        });
+
     </script>
-    <style>
-        /* CSS goes here */
-        body {
-            overflow-y: hidden;
-            background-color: #B8DBD8;
-        }
 
-        .container {
-            width: 100vw;
-            height: 100vh;
-        }
-        .content-wrapper {
-            width: 100vw;
-            white-space: nowrap;
-        }
-        .section {
-            width: 100vw;
-            min-height: 100vh;
-            display: inline-block;
-            position: relative;
-            overflow: hidden;
-            
-        }
-
-        .text{
-            font-size: 150px;
-            color:black;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-        }
-        .menu {
-            width: 10vw;
-            height: 300vh;
-            display: inline-block;
-            position: absolute;
-            background-color: #E66025;
-            position:absolute;
-            top: -230px;
-        }
-        .gallery {
-            width: 35vw;
-            height: 100vh;
-            display: inline-block;
-            left: 60%;
-            position:absolute;
-            top: 0;
-        }
-        .gallery.two {
-            background-color: #FFF4CA;
-            display: flex; /* Use flexbox for layout */
-            flex-direction: column; /* Stack children vertically */
-            align-items: center; /* Center-align the images */
-            justify-content: space-around; /* Distribute space around the images */
-            gap: 70px; /* Add gap between images */
-        }
-
-        .gallery.two img{
-            width: 70%;
-            height: auto;
-        }
-        .gallery.three {
-            background-color: #CABBD5;
-            display: flex; /* Use flexbox for layout */
-            flex-direction: column; /* Stack children vertically */
-            align-items: center; /* Center-align the images */
-            justify-content: space-around; /* Distribute space around the images */
-            gap: 70px; /* Add gap between images */
-        }
-
-        .gallery.three img{
-            width: 70%;
-            height: auto;
-        }
-
-        .gallery.four {
-            background-color: #ECAF7A;
-            display: flex; /* Use flexbox for layout */
-            flex-direction: column; /* Stack children vertically */
-            align-items: center; /* Center-align the images */
-            justify-content: space-around; /* Distribute space around the images */
-            gap: 70px; /* Add gap between images */
-        }
-
-        .gallery.four img{
-            width: 70%;
-            height: auto;
-        }
-
-        .gallery.five {
-            background-color: #FFF4CA;
-            display: flex; /* Use flexbox for layout */
-            flex-direction: column; /* Stack children vertically */
-            align-items: center; /* Center-align the images */
-            justify-content: space-around; /* Distribute space around the images */
-            gap: 70px; /* Add gap between images */
-        }
-
-        .gallery.five img{
-            width: 70%;
-            height: auto;
-        }
-
-        .gallery.six {
-            background-color: #B4C58E;
-            display: flex; /* Use flexbox for layout */
-            flex-direction: column; /* Stack children vertically */
-            align-items: center; /* Center-align the images */
-            justify-content: space-around; /* Distribute space around the images */
-            gap: 70px; /* Add gap between images */
-        }
-
-        .gallery.six img{
-            width: 70%;
-            height: auto;
-        }
-
-        .cloud-sun{
-            position:absolute;
-            top: -230px;
-            left: -130px;
-            width: 1300px;
-            height: 1200px
-        }
-        .all-things{
-            position:absolute;
-            top: -520px;
-            left: 700px;
-            width: 1300px;
-            height: 1200px
-
-        }
-
-        .little-girl{
-            position:absolute;
-            top: 220px;
-            left: 960px;
-            width: 370px;
-            height: auto;
-        }
-        .bear{
-            position:absolute;
-            top: 240px;
-            left: 1300px;
-            width: 180px;
-            height: auto;
-        }
-
-        .beginText{
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 26px;
-            position:absolute;
-            top: 510px;
-            left: 630px;
-        }
-
-        .ericHead{
-            width: 300px;
-            height: auto;
-            position: absolute;
-            top: 90px;
-            left: 180px;
-        }
-
-        .shelHead{
-            width: 320px;
-            height: auto;
-            position: absolute;
-            top: 90px;
-            left: 180px;
-        }
-
-        .beatrixHead{
-            width: 300px;
-            height: auto;
-            position: absolute;
-            top: 90px;
-            left: 180px;
-        }
-
-        .donHead{
-            width: 420px;
-            height: auto;
-            position: absolute;
-            top: 90px;
-            left: 180px;
-        }
-
-        .talithaHead{
-            width: 300px;
-            height: auto;
-            position: absolute;
-            top: 90px;
-            left: 180px;
-        }
-
-        #ericName{
-            width: 1000px;
-            height: auto;
-            position: absolute;
-            top:  170px;
-            left: -170px;
-        }
-
-        #shelName{
-            width: 1000px;
-            height: auto;
-            position: absolute;
-            top:  170px;
-            left: -150px;
-        }
-
-        #beaName{
-            width: 1000px;
-            height: auto;
-            position: absolute;
-            top:  170px;
-            left: -150px;
-        }
-
-        #donName{
-            width: 1000px;
-            height: auto;
-            position: absolute;
-            top:  170px;
-            left: -120px;
-        }
-
-        #talName{
-            width: 1000px;
-            height: auto;
-            position: absolute;
-            top:  170px;
-            left: -200px;
-        }
-
-        #butterflyCursor{
-            position: absolute;
-            pointer-events: none; /* Ensures it doesn't interfere with other mouse events */
-            z-index: 1000; /* Ensures it's on top of other elements */
-            width: 250px; /* Adjust as needed */
-            height: auto; /* Adjust as needed */
-            display: none; /* Initially hidden */
-        }
-        
-    </style>
   </head>
   <body>
     <img id="butterflyCursor" src="butterfly1.png" />
-    <!--place containers here-->
+
     <div class="container">
         <div class="content-wrapper">
             <div class="section one">
@@ -698,6 +488,8 @@
                     </g>
                   </svg>
             </div>
+
+            <!-- Section Two -->
             <div class="section two">
                 <img class="ericHead" src="ericcarle.jpeg" alt="eric">
                 <!-- This is eric's name -->
@@ -756,12 +548,14 @@
                 </svg>
 
                 <div class="gallery two">
-                    <img src="eric/catepillar.jpeg" alt="Image 1">
-                    <img src="eric/elephant.jpg" alt="Image 2">
-                    <img src="eric/rooster.jpeg" alt="Image 3">
-                    <img src="eric/kangaroo.jpeg" alt="Image 4">
+                    <img class="image-slide" src="eric/catepillar.jpeg" alt="Image 1">
+                    <img class="image-slide" src="eric/elephant.jpg" alt="Image 2">
+                    <img class="image-slide" src="eric/rooster.jpeg" alt="Image 3">
+                    <img class="image-slide" src="eric/kangaroo.jpeg" alt="Image 4">
                 </div>
             </div>
+
+            <!-- Section Three -->
             <div class="section three">
                 <img class="shelHead" src="shelsilverstein.jpeg" alt="eric">
 
@@ -854,12 +648,14 @@
                 </svg>
 
                 <div class="gallery three">
-                    <img src="shel/edge.jpeg" alt="Image 1">
-                    <img src="shel/mars.jpeg" alt="Image 2">
-                    <img src="shel/everythingonit.jpeg" alt="Image 3">
-                    <img src="shel/otherside.jpeg" alt="Image 4">
+                    <img class="image-slide" src="shel/edge.jpeg" alt="Image 1">
+                    <img class="image-slide" src="shel/mars.jpeg" alt="Image 2">
+                    <img class="image-slide" src="shel/everythingonit.jpeg" alt="Image 3">
+                    <img class="image-slide" src="shel/otherside.jpeg" alt="Image 4">
                 </div>
             </div>
+
+            <!-- Section Four -->
             <div class="section four">
                 <img class="beatrixHead" src="beatrixpotter.jpeg" alt="eric">
 
@@ -946,12 +742,14 @@
                 </svg>
 
                 <div class="gallery four">
-                    <img src="beatrix/bunnyapple.jpeg" alt="Image 1">
-                    <img src="beatrix/bunnyliter.jpeg" alt="Image 2">
-                    <img src="beatrix/bunnypouring.jpg" alt="Image 3">
-                    <img src="beatrix/bunnyrun.jpg" alt="Image 4">
+                    <img class="image-slide" src="beatrix/bunnyapple.jpeg" alt="Image 1">
+                    <img class="image-slide" src="beatrix/bunnyliter.jpeg" alt="Image 2">
+                    <img class="image-slide" src="beatrix/bunnypouring.jpg" alt="Image 3">
+                    <img class="image-slide" src="beatrix/bunnyrun.jpg" alt="Image 4">
                 </div>
             </div>
+
+            <!-- Section Five -->
             <div class="section five">
                 <img class="donHead" src="donfreeman.jpeg" alt="eric">
 
@@ -1022,13 +820,15 @@
                 </svg>
 
                 <div class="gallery five">
-                    <img src="don/corduroy.jpg" alt="Image 1">
-                    <img src="don/corduroytoys.jpeg" alt="Image 2">
-                    <img src="don/girl-room-bear.jpg" alt="Image 3">
-                    <img src="don/girl-shop-bear.jpeg" alt="Image 4">
-                    <img src="don/toyshop.jpeg" alt="Image 4">
+                    <img class="image-slide" src="don/corduroy.jpg" alt="Image 1">
+                    <img class="image-slide" src="don/corduroytoys.jpeg" alt="Image 2">
+                    <img class="image-slide" src="don/girl-room-bear.jpg" alt="Image 3">
+                    <img class="image-slide" src="don/girl-shop-bear.jpeg" alt="Image 4">
+                    <img class="image-slide" src="don/toyshop.jpeg" alt="Image 4">
                 </div>
             </div>
+
+            <!-- Section Six -->
             <div class="section six">
                 <img class="talithaHead" src="talithashipman.jpeg" alt="eric">
 
@@ -1131,11 +931,11 @@
                 </svg>
 
                 <div class="gallery six">
-                    <img src="talitha/fall.jpeg" alt="Image 1">
-                    <img src="talitha/icecream.jpeg" alt="Image 3">
-                    <img src="talitha/onyourway.jpeg" alt="Image 4">
-                    <img src="talitha/snowangels.jpeg" alt="Image 4">
-                    <img src="talitha/treehouse.jpeg" alt="Image 4">
+                    <img class="image-slide" src="talitha/fall.jpeg" alt="Image 1">
+                    <img class="image-slide" src="talitha/icecream.jpeg" alt="Image 3">
+                    <img class="image-slide" src="talitha/onyourway.jpeg" alt="Image 4">
+                    <img class="image-slide" src="talitha/snowangels.jpeg" alt="Image 4">
+                    <img class="image-slide" src="talitha/treehouse.jpeg" alt="Image 4">
                 </div>
             </div>
         </div>
