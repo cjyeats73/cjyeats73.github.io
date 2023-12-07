@@ -275,5 +275,22 @@ body {
 
 /* CSS for the sun animation */
 .st00{
-  
+    transform-origin: bottom left; 
+    opacity: 75;
+    animation: sun_anim 2s linear infinite;
+}
+
+@keyframes sun_anim {
+    0% {
+        opacity: 75;
+        transform: translateX(0px) translateY(0px) scale(1,1);
+    }
+    50% {
+        opacity: 100;
+        transform: translateX(-150px) translateY(150px) scale(1.25,1.25);
+    }
+    100% {
+        opacity: 75;
+        transform: translateX(0px) translateY(0px) scale(1,1);
+    }
 }
