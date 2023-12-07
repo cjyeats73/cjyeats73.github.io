@@ -181,6 +181,7 @@ body {
     left: 630px;
 }
 
+/* CSS for artists' picture */
 .ericHead{
     width: 300px;
     height: auto;
@@ -221,6 +222,7 @@ body {
     left: 180px;
 }
 
+/* CSS for artists' name. */
 #ericName{
     width: 1000px;
     height: auto;
@@ -261,7 +263,7 @@ body {
     left: -200px;
 }
 
-
+ /* CSS for butterfly  cursor */
 #butterflyCursor{
     position: absolute;
     pointer-events: none; /* Ensures it doesn't interfere with other mouse events */
@@ -269,4 +271,9 @@ body {
     width: 250px; /* Adjust as needed */
     height: auto; /* Adjust as needed */
     display: none; /* Initially hidden */
+}
+
+/* CSS for the sun animation */
+.st00{
+  
 }
