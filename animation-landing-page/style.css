@@ -1,4 +1,11 @@
   /* CSS goes here */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     overflow-y: hidden;
     background-color: #B8DBD8;
@@ -18,7 +25,8 @@ body {
     display: inline-block;
     position: relative;
     overflow: hidden;
-    
+    padding: 0;
+    margin: 0;
 }
 
 .text{
@@ -273,16 +281,35 @@ body {
     display: none; /* Initially hidden */
 }
 
+/* CSS for the green grass */
+#grass1{
+  width: 1720px;
+  height: auto;
+  position: absolute;
+  top:  200px;
+  left: 100px;
+  z-index: -100;
+}
+
+#grass2{
+  width: 1720px;
+  height: auto;
+  position: absolute;
+  top:  200px;
+  left: -100px;
+  z-index: -100;
+}
+
 /* CSS for the sun animation */
 .st00{
     transform-origin: bottom left; 
-    opacity: 75;
-    animation: sun_anim 2s linear infinite;
+    opacity: 20;
+    animation: sun_anim 2s ease-in-out infinite;
 }
 
 @keyframes sun_anim {
     0% {
-        opacity: 75;
+        opacity: 20;
         transform: translateX(0px) translateY(0px) scale(1,1);
     }
     50% {
@@ -290,7 +317,7 @@ body {
         transform: translateX(-150px) translateY(150px) scale(1.25,1.25);
     }
     100% {
-        opacity: 75;
+        opacity: 25;
         transform: translateX(0px) translateY(0px) scale(1,1);
     }
 }
