@@ -37,6 +37,12 @@ body {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
+.description {
+    transform: translateX(180px) translateY(625px);
+}
+.stinger {
+    transform: translateX(180px) translateY(650px);
+}
 .menu {
     width: 10vw;
     height: 300vh;
