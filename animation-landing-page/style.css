@@ -179,13 +179,13 @@ body {
     width: 370px;
     height: auto;
 }
-.bear{
+/* .bear{
     position:absolute;
     top: 240px;
     left: 1300px;
     width: 180px;
     height: auto;
-}
+} */
 
 .beginText{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -326,4 +326,10 @@ body {
         opacity: 25;
         transform: translateX(0px) translateY(0px) scale(1,1);
     }
+}
+
+.description{
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 18px;
+    font-weight: bold;
 }
