@@ -52,6 +52,15 @@ body {
     position:absolute;
     top: -230px;
 }
+
+.image-slide1 {
+    position: absolute;
+    bottom: -100%; /* Start below the screen */
+    width: 100%;
+    /* Add transitions for smooth sliding */
+    transition: bottom 2s;
+}
+
 .gallery {
     width: 35vw;
     height: 100vh;

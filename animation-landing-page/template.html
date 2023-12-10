@@ -35,36 +35,35 @@
             }
         });
 
-        $(document).ready(function() {
-            const imageSlides = document.querySelectorAll('.image-slide');
+        document.addEventListener('DOMContentLoaded', function () {
+            let currentIndex = 0;
+            const images = document.querySelectorAll('.image-slide1');
+            const totalImages = images.length;
 
-            // Store the animation state for all slides
-            let animationStates = {};
+            function slideImage() {
+                // Move the current image to the middle and pause
+                images[currentIndex].style.bottom = '50%';
 
-            imageSlides.forEach((imageSlide) => {
-                imageSlide.addEventListener('mouseover', () => {
-                    // Pause the animation for all image slides
-                    imageSlides.forEach((slide) => {
-                        animationStates[slide.id] = slide.style.animationPlayState;
-                        slide.style.animationPlayState = 'paused';
-                    });
+                setTimeout(() => {
+                    // After a pause, continue moving off the top
+                    images[currentIndex].style.bottom = '100%';
 
-                    // Enlarge the hovered image
-                    imageSlide.style.transform = 'scale(1.05)';
-                });
+                    // Reset the position of the current image to start from the bottom again
+                    setTimeout(() => {
+                        images[currentIndex].style.bottom = '-100%';
+                    }, 1000); // Reset after it moves off the screen
 
-                imageSlide.addEventListener('mouseout', () => {
-                    // Resume the animation for all image slides
-                    imageSlides.forEach((slide) => {
-                        slide.style.animationPlayState = animationStates[slide.id];
-                    });
+                    // Update the index for the next image
+                    currentIndex = (currentIndex + 1) % totalImages;
 
-                    // Shrink the image back to its original size
-                    imageSlide.style.transform = 'scale(1)';
-                });
-            });
+                    // Pre-position the next image at the bottom
+                    images[currentIndex].style.bottom = '-100%';
+                }, 2000); // Pause for 1 second in the middle
+            }
+
+            // Start the slideshow
+            setInterval(slideImage, 4000); // Change image every 4 seconds to include 1 second pause
         });
-
     </script>
 
   </head>
@@ -590,10 +589,10 @@
                 </div>
 
                 <div class="gallery two">
-                    <img class="image-slide" src="eric/catepillar.jpeg" alt="Image 1">
-                    <img class="image-slide" src="eric/elephant.jpg" alt="Image 2">
-                    <img class="image-slide" src="eric/rooster.jpeg" alt="Image 3">
-                    <img class="image-slide" src="eric/kangaroo.jpeg" alt="Image 4">
+                    <img class="image-slide1" src="eric/catepillar.jpeg" alt="Image 1">
+                    <img class="image-slide1" src="eric/elephant.jpg" alt="Image 2">
+                    <img class="image-slide1" src="eric/rooster.jpeg" alt="Image 3">
+                    <img class="image-slide1" src="eric/kangaroo.jpeg" alt="Image 4">
                 </div>
             </div>
 
@@ -707,10 +706,10 @@
                 </div>
 
                 <div class="gallery three">
-                    <img class="image-slide" src="shel/edge.jpeg" alt="Image 1">
-                    <img class="image-slide" src="shel/mars.jpeg" alt="Image 2">
-                    <img class="image-slide" src="shel/everythingonit.jpeg" alt="Image 3">
-                    <img class="image-slide" src="shel/otherside.jpeg" alt="Image 4">
+                    <img class="image-slide2" src="shel/edge.jpeg" alt="Image 1">
+                    <img class="image-slide2" src="shel/mars.jpeg" alt="Image 2">
+                    <img class="image-slide2" src="shel/everythingonit.jpeg" alt="Image 3">
+                    <img class="image-slide2" src="shel/otherside.jpeg" alt="Image 4">
                 </div>
             </div>
 
@@ -819,10 +818,10 @@
                 </div>
 
                 <div class="gallery four">
-                    <img class="image-slide" src="beatrix/bunnyapple.jpeg" alt="Image 1">
-                    <img class="image-slide" src="beatrix/bunnyliter.jpeg" alt="Image 2">
-                    <img class="image-slide" src="beatrix/bunnypouring.jpg" alt="Image 3">
-                    <img class="image-slide" src="beatrix/bunnyrun.jpg" alt="Image 4">
+                    <img class="image-slide3" src="beatrix/bunnyapple.jpeg" alt="Image 1">
+                    <img class="image-slide3" src="beatrix/bunnyliter.jpeg" alt="Image 2">
+                    <img class="image-slide3" src="beatrix/bunnypouring.jpg" alt="Image 3">
+                    <img class="image-slide3" src="beatrix/bunnyrun.jpg" alt="Image 4">
                 </div>
             </div>
 
@@ -915,11 +914,11 @@
                 </div>
 
                 <div class="gallery five">
-                    <img class="image-slide" src="don/corduroy.jpg" alt="Image 1">
-                    <img class="image-slide" src="don/corduroytoys.jpeg" alt="Image 2">
-                    <img class="image-slide" src="don/girl-room-bear.jpg" alt="Image 3">
-                    <img class="image-slide" src="don/girl-shop-bear.jpeg" alt="Image 4">
-                    <img class="image-slide" src="don/toyshop.jpeg" alt="Image 4">
+                    <img class="image-slide4" src="don/corduroy.jpg" alt="Image 1">
+                    <img class="image-slide4" src="don/corduroytoys.jpeg" alt="Image 2">
+                    <img class="image-slide4" src="don/girl-room-bear.jpg" alt="Image 3">
+                    <img class="image-slide4" src="don/girl-shop-bear.jpeg" alt="Image 4">
+                    <img class="image-slide4" src="don/toyshop.jpeg" alt="Image 4">
                 </div>
             </div>
 
@@ -1044,11 +1043,11 @@
                 </div>
 
                 <div class="gallery six">
-                    <img class="image-slide" src="talitha/fall.jpeg" alt="Image 1">
-                    <img class="image-slide" src="talitha/icecream.jpeg" alt="Image 3">
-                    <img class="image-slide" src="talitha/onyourway.jpeg" alt="Image 4">
-                    <img class="image-slide" src="talitha/snowangels.jpeg" alt="Image 4">
-                    <img class="image-slide" src="talitha/treehouse.jpeg" alt="Image 4">
+                    <img class="image-slide5" src="talitha/fall.jpeg" alt="Image 1">
+                    <img class="image-slide5" src="talitha/icecream.jpeg" alt="Image 3">
+                    <img class="image-slide5" src="talitha/onyourway.jpeg" alt="Image 4">
+                    <img class="image-slide5" src="talitha/snowangels.jpeg" alt="Image 4">
+                    <img class="image-slide5" src="talitha/treehouse.jpeg" alt="Image 4">
                 </div>
             </div>
         </div>
