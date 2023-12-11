@@ -53,14 +53,6 @@ body {
     top: -230px;
 }
 
-.image-slide1 {
-    position: absolute;
-    bottom: -100%; /* Start below the screen */
-    width: 100%;
-    /* Add transitions for smooth sliding */
-    transition: bottom 2s;
-}
-
 .gallery {
     width: 35vw;
     height: 100vh;
@@ -299,7 +291,7 @@ body {
 /* CSS for the green grass */
 #grass1{
   width: 1720px;
-  height: auto;
+  height: 1380px;
   position: absolute;
   top:  200px;
   left: 100px;
@@ -308,7 +300,7 @@ body {
 
 #grass2{
   width: 1720px;
-  height: auto;
+  height: 1380px;
   position: absolute;
   top:  200px;
   left: -100px;
@@ -342,3 +334,120 @@ body {
     font-size: 18px;
     font-weight: bold;
 }
+
+.image-slide1 {
+    position: absolute;
+    bottom: -100%; /* Start below the screen */
+    width: 100%;
+    /* Add transitions for smooth sliding */
+    transition: bottom 2s;
+}
+
+.image-slide1{
+    /* Other styling */
+    opacity: 0; /* Hide initially */
+    transition: bottom 2s, opacity 2s; /* Add transition for opacity */
+}
+
+.image-slide1.show {
+    opacity: 1; /* Show when this class is added */
+}
+
+.image-slide1:hover {
+    transform: scale(1.1); /* Scale up the image */
+    transition: transform 0.3s; /* Smooth transition for scaling */
+}
+
+.image-slide2 {
+    position: absolute;
+    bottom: -100%; /* Start below the screen */
+    width: 100%;
+    /* Add transitions for smooth sliding */
+    transition: bottom 2s;
+}
+
+.image-slide2{
+    /* Other styling */
+    opacity: 0; /* Hide initially */
+    transition: bottom 2s, opacity 2s; /* Add transition for opacity */
+}
+
+.image-slide2.show {
+    opacity: 1; /* Show when this class is added */
+}
+
+.image-slide2:hover {
+    transform: scale(1.1); /* Scale up the image */
+    transition: transform 0.3s; /* Smooth transition for scaling */
+}
+
+.image-slide3 {
+    position: absolute;
+    bottom: -100%; /* Start below the screen */
+    width: 100%;
+    /* Add transitions for smooth sliding */
+    transition: bottom 2s;
+}
+
+.image-slide3{
+    /* Other styling */
+    opacity: 0; /* Hide initially */
+    transition: bottom 2s, opacity 2s; /* Add transition for opacity */
+}
+
+.image-slide3.show {
+    opacity: 1; /* Show when this class is added */
+}
+
+.image-slide3:hover {
+    transform: scale(1.1); /* Scale up the image */
+    transition: transform 0.3s; /* Smooth transition for scaling */
+}
+
+.image-slide4 {
+    position: absolute;
+    bottom: -100%; /* Start below the screen */
+    width: 100%;
+    /* Add transitions for smooth sliding */
+    transition: bottom 2s;
+}
+
+.image-slide4{
+    /* Other styling */
+    opacity: 0; /* Hide initially */
+    transition: bottom 2s, opacity 2s; /* Add transition for opacity */
+}
+
+.image-slide4.show {
+    opacity: 1; /* Show when this class is added */
+}
+
+.image-slide4:hover {
+    transform: scale(1.1); /* Scale up the image */
+    transition: transform 0.3s; /* Smooth transition for scaling */
+}
+
+.image-slide5 {
+    position: absolute;
+    bottom: -100%; /* Start below the screen */
+    width: 100%;
+    /* Add transitions for smooth sliding */
+    transition: bottom 2s;
+}
+
+.image-slide5{
+    /* Other styling */
+    opacity: 0; /* Hide initially */
+    transition: bottom 2s, opacity 2s; /* Add transition for opacity */
+}
+
+.image-slide5.show {
+    opacity: 1; /* Show when this class is added */
+}
+
+.image-slide5:hover {
+    transform: scale(1.1); /* Scale up the image */
+    transition: transform 0.3s; /* Smooth transition for scaling */
+}
+
+

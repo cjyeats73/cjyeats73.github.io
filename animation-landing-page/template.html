@@ -6,65 +6,10 @@
     <title>CSS Animation Playground</title>
     <!-- link for CSS -->
     <link rel="stylesheet" href="style.css">
+    <script src="myscripts.js"></script>
 
     <!-- link for Javascript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-        let isButterflyOne = true;
-        let canSwitch = true; // New flag to control the switch
-        let switchDelay = 350; // Delay in milliseconds (500ms = 0.5 seconds)
-
-        document.addEventListener('mousemove', function(e) {
-            var butterfly = document.getElementById('butterflyCursor');
-            butterfly.style.display = 'block';
-            butterfly.style.left = (e.pageX - 260) + 'px';
-            butterfly.style.top = e.pageY + 'px';
-
-            if (canSwitch) {
-                if (isButterflyOne) {
-                    butterfly.src = 'butterfly-02.png';
-                } else {
-                    butterfly.src = 'butterfly-01.png';
-                }
-                isButterflyOne = !isButterflyOne;
-
-                canSwitch = false; // Prevent further switches
-                setTimeout(function() { 
-                    canSwitch = true; // Allow switching after the delay
-                }, switchDelay);
-            }
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            let currentIndex = 0;
-            const images = document.querySelectorAll('.image-slide1');
-            const totalImages = images.length;
-
-            function slideImage() {
-                // Move the current image to the middle and pause
-                images[currentIndex].style.bottom = '50%';
-
-                setTimeout(() => {
-                    // After a pause, continue moving off the top
-                    images[currentIndex].style.bottom = '100%';
-
-                    // Reset the position of the current image to start from the bottom again
-                    setTimeout(() => {
-                        images[currentIndex].style.bottom = '-100%';
-                    }, 1000); // Reset after it moves off the screen
-
-                    // Update the index for the next image
-                    currentIndex = (currentIndex + 1) % totalImages;
-
-                    // Pre-position the next image at the bottom
-                    images[currentIndex].style.bottom = '-100%';
-                }, 2000); // Pause for 1 second in the middle
-            }
-
-            // Start the slideshow
-            setInterval(slideImage, 4000); // Change image every 4 seconds to include 1 second pause
-        });
-    </script>
 
   </head>
   <body>
