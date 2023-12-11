@@ -450,4 +450,25 @@ body {
     transition: transform 0.3s; /* Smooth transition for scaling */
 }
 
+@keyframes waveAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Example transformation */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
+.path-animation {
+    opacity: 0; /* Start with the path invisible */
+    animation: waveAnimation 1s forwards; /* Animation duration and fill mode */
+}
+
+#audio{
+    position: absolute;
+    top:  0px;
+    left: 100px;
+    z-index: 1000;
+}

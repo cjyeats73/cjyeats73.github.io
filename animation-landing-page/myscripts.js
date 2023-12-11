@@ -234,6 +234,23 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  const paths = document.querySelectorAll('.st30');
+  let delay = 0;
+  const delayIncrement = 100; // milliseconds
+
+  paths.forEach(path => {
+      setTimeout(() => {
+          path.classList.add('path-animation');
+      }, delay);
+      delay += delayIncrement;
+  });
+});
+
+window.addEventListener('click', ()=>{
+  document.getElementById("audio").play();
+});
+
 
 
 
