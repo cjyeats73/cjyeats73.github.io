@@ -2,12 +2,6 @@ let isButterflyOne = true;
 let canSwitch = true; // New flag to control the switch
 let switchDelay = 350; // Delay in milliseconds (500ms = 0.5 seconds)
 
-document.addEventListener(wheel, function(e) {
-    var delta = e.wheelData || -e.detail;
-    document.querySelector('.container').scrollLeft -= delta;
-    e.preventDefault();
-});
-
 document.addEventListener('mousemove', function(e) {
     var butterfly = document.getElementById('butterflyCursor');
     butterfly.style.display = 'block';
