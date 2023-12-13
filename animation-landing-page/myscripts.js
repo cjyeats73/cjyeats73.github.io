@@ -6,7 +6,7 @@ document.addEventListener(scroll, function() {
     //get scroll position
     const vertScroll = window.scrollY || window.pageYOffset;
 
-    //apply
+    //apply scroll to container
     const horiScroll = -vertScroll + "px";
     document.querySelector(".container").style.transform = "translateX(" + horiScroll + ")";
 });
