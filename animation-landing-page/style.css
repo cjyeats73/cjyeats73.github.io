@@ -514,6 +514,52 @@ body {
     z-index: 1000;
 }
 
+/* here's the chicken */
+.animation-container {
+    position: relative;
+    width: 15px; /* Adjust based on your image size */
+    height: 15px; /* Adjust based on your image size */
+}
+
+#chickenStart, #chickenFinish {
+    position: absolute;
+    top: 770px;
+    left: 200px;
+    animation-duration: 4s; /* Adjust based on desired speed */
+    animation-iteration-count: infinite;
+    width: 150px;
+    height: 150px;
+}
+
+#chickenStart {
+    animation-name: moveChickenStart;
+}
+
+#chickenFinish {
+    animation-name: moveChickenFinish;
+}
+
+@keyframes moveChickenStart {
+    0%, 50% {
+        display: block;
+        left: 0;
+    }
+    100% {
+        display: none;
+        left: 400px; /* Adjust the amount of forward movement */
+    }
+}
+
+@keyframes moveChickenFinish {
+    0%, 50% {
+        display: none;
+        left: 400px;
+    }
+    100% {
+        display: block;
+        left: 600px; /* Adjust the amount of forward movement */
+    }
+}
 
 /* .content{
     position: absolute;
