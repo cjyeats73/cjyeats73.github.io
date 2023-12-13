@@ -521,68 +521,52 @@ body {
     height: 15px; /* Adjust based on your image size */
 }
 
-#chickenStart, #chickenFinish {
+.chicken {
     position: absolute;
-    top: 770px;
-    left: 200px;
-    animation-duration: 4s; /* Adjust based on desired speed */
-    animation-iteration-count: infinite;
+    top: 760px;
+    left: 10px;
     width: 150px;
     height: 150px;
 }
 
-#chickenStart {
-    animation-name: moveChickenStart;
-}
-
-#chickenFinish {
-    animation-name: moveChickenFinish;
-}
-
-@keyframes moveChickenStart {
-    0%, 50% {
-        display: block;
-        left: 0;
-    }
-    100% {
-        display: none;
-        left: 400px; /* Adjust the amount of forward movement */
-    }
-}
-
-@keyframes moveChickenFinish {
-    0%, 50% {
-        display: none;
-        left: 400px;
-    }
-    100% {
-        display: block;
-        left: 600px; /* Adjust the amount of forward movement */
-    }
-}
-
-/* .content{
+/* this is the flower */
+.flower1{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.6);
-    color: #ffffff;
-    font-family: 'Quicksand', sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.25s;
-  }
+    top: 760px;
+    left: 100px;
+    width: 150px;
+    height: 150px;
+}
 
-  .content:hover{
-    opacity:1;
-  }
+.flower2{
+    position: absolute;
+    top: 760px;
+    left: 500px;
+    width: 150px;
+    height: 150px;
+}
 
-  .title{
-    font-size: 1.25em;
-    font-weight: bold;
-  } */
+.cloud1{
+    position: absolute;
+    top: -300px;
+    left: 150px;
+    width: 1000px;
+    height: 1000px;
+    z-index: -100;
+    animation: upDown 2s ease-in-out infinite; /* Animation duration and fill mode */
+}
+
+@keyframes upDown {
+    0% {
+        opacity: 0.3;
+        transform: translateY(0px); /* Example transformation */
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(-40px); /* Example transformation */
+    }
+    100% {
+        opacity: 0.3;
+        transform: translateY(0);
+    }
+}

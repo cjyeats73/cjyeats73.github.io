@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // After a delay, start moving the next image up and make it visible
         setTimeout(() => {
-            images[currentIndex].style.bottom = '50%';
+            images[currentIndex].style.bottom = '25%';
             images[currentIndex].classList.add('show');
         }, 2000); // 2-second pause
     }
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // After a delay, start moving the next image up and make it visible
       setTimeout(() => {
-          images[currentIndex].style.bottom = '50%';
+          images[currentIndex].style.bottom = '25%';
           images[currentIndex].classList.add('show');
       }, 2000); // 2-second pause
   }
@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // After a delay, start moving the next image up and make it visible
       setTimeout(() => {
-          images[currentIndex].style.bottom = '50%';
+          images[currentIndex].style.bottom = '25%';
           images[currentIndex].classList.add('show');
       }, 2000); // 2-second pause
   }
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // After a delay, start moving the next image up and make it visible
       setTimeout(() => {
-          images[currentIndex].style.bottom = '50%';
+          images[currentIndex].style.bottom = '25%';
           images[currentIndex].classList.add('show');
       }, 2000); // 2-second pause
   }
@@ -344,3 +344,29 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', revealOnScroll);
 });
 
+// Chicken move
+document.addEventListener('DOMContentLoaded', function() {
+    let showingStart = true;
+    const chickenStart = document.getElementById('chickenStart');
+    const chickenFinish = document.getElementById('chickenFinish');
+    let moveDistance = 0;
+
+    if (chickenStart && chickenFinish) {
+        setInterval(() => {
+            moveDistance += 10; // Adjust this value to control the movement distance
+
+            if (showingStart) {
+                chickenStart.style.display = 'none';
+                chickenFinish.style.display = 'block';
+                chickenFinish.style.transform = `translateX(${moveDistance}px)`;
+            } else {
+                chickenFinish.style.display = 'none';
+                chickenStart.style.display = 'block';
+                chickenStart.style.transform = `translateX(${moveDistance}px)`;
+            }
+            showingStart = !showingStart;
+        }, 1000);
+    } else {
+        console.error('One or more elements could not be found!');
+    }
+});
