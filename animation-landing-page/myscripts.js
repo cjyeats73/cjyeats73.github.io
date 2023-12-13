@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // After a delay, start moving the next image up and make it visible
         setTimeout(() => {
-            images[currentIndex].style.bottom = '50%';
+            images[currentIndex].style.bottom = '30%';
             images[currentIndex].classList.add('show');
         }, 2000); // 2-second pause
     }
