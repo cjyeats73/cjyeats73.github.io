@@ -252,5 +252,95 @@ window.addEventListener('click', ()=>{
 });
 
 
+// reveal the head image
+document.addEventListener('DOMContentLoaded', function () {
+  const ericHead = document.querySelector('.ericHead');
 
+  function revealOnScroll() {
+      const windowWidth = window.innerWidth;
+      const imageLeft = ericHead.getBoundingClientRect().left;
+      const imageVisible = 150; // Amount of the image that needs to be visible
+
+      if (imageLeft < windowWidth - imageVisible) {
+          ericHead.classList.add('revealed');
+      } else {
+          ericHead.classList.remove('revealed');
+      }
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const shelHead = document.querySelector('.shelHead');
+
+  function revealOnScroll() {
+      const windowWidth = window.innerWidth;
+      const imageLeft = shelHead.getBoundingClientRect().left;
+      const imageVisible = 150; // Amount of the image that needs to be visible
+
+      if (imageLeft < windowWidth - imageVisible) {
+        shelHead.classList.add('revealed');
+      } else {
+        shelHead.classList.remove('revealed');
+      }
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  const beatrixHead = document.querySelector('.beatrixHead');
+
+  function revealOnScroll() {
+      const windowWidth = window.innerWidth;
+      const imageLeft = beatrixHead.getBoundingClientRect().left;
+      const imageVisible = 150; // Amount of the image that needs to be visible
+
+      if (imageLeft < windowWidth - imageVisible) {
+        beatrixHead.classList.add('revealed');
+      } else {
+        beatrixHead.classList.remove('revealed');
+      }
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const donHead = document.querySelector('.donHead');
+
+  function revealOnScroll() {
+      const windowWidth = window.innerWidth;
+      const imageLeft = donHead.getBoundingClientRect().left;
+      const imageVisible = 150; // Amount of the image that needs to be visible
+
+      if (imageLeft < windowWidth - imageVisible) {
+        donHead.classList.add('revealed');
+      } else {
+        donHead.classList.remove('revealed');
+      }
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const talithaHead = document.querySelector('.talithaHead');
+
+  function revealOnScroll() {
+      const windowWidth = window.innerWidth;
+      const imageLeft = talithaHead.getBoundingClientRect().left;
+      const imageVisible = 150; // Amount of the image that needs to be visible
+
+      if (imageLeft < windowWidth - imageVisible) {
+        talithaHead.classList.add('revealed');
+      } else {
+        talithaHead.classList.remove('revealed');
+      }
+  }
+
+  window.addEventListener('scroll', revealOnScroll);
+});
 
