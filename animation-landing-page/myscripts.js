@@ -1,3 +1,17 @@
+// document.addEventListener('DOMContentLoaded', function() {
+//     const scrollable = document.querySelector(".container");
+//     if (!scrollable) {
+//         console.error('No element with class "container" found.');
+//         return;
+//     }
+
+//     scrollable.addEventListener('wheel', function(e) {
+//         var scrollAmount = e.deltaY;
+//         this.scrollLeft += scrollAmount;
+//         e.preventDefault(); // Prevent the default vertical scroll
+//     }, { passive: false }); // Ensure the event is not treated as passive
+// });
+
 let isButterflyOne = true;
 let canSwitch = true; // New flag to control the switch
 let switchDelay = 350; // Delay in milliseconds (500ms = 0.5 seconds)
