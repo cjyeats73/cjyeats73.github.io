@@ -82,13 +82,6 @@ body {
     border: 15px solid #9ad49d; 
     /* transition: slideUp 1s ease-in-out infinite 0s; */
 }
-/* @keyframes slideUp {
-    0% { transform: translateY(0); }
-    25% { transform: translateY(-100%); }
-    50% { transform: translateY(-200%); }
-    75% { transform: translateY(-300%); }
-    100% { transform: translateY(-400%); }
-} */
 
 .gallery.three {
     background-color: #CABBD5;
@@ -327,7 +320,6 @@ body {
 }
 
 /* CSS for the green grass */
-
 #grass1{
   width: 1720px;
   height: 1380px;
@@ -374,6 +366,7 @@ body {
     font-weight: bold;
 }
 
+/* imgae slide! */
 .image-slide1 {
     position: absolute;
     bottom: -100%; /* Start below the screen */
@@ -500,11 +493,13 @@ body {
     }
 }
 
+/* path animation */
 .path-animation {
     opacity: 0; /* Start with the path invisible */
     animation: waveAnimation 5s forwards infinite; /* Animation duration and fill mode */
 }
 
+/* audio css */
 #audio{
     position: absolute;
     top:  0px;
@@ -544,6 +539,7 @@ body {
     height: 150px;
 }
 
+/* this is the cloud */
 .cloud1{
     position: absolute;
     top: -300px;
