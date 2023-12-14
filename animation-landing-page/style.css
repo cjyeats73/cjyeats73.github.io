@@ -1,6 +1,6 @@
   /* CSS goes here */
 
-  * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,8 +14,8 @@ body {
 .container {
     width: 100vw;
     height: 100vh;
-    /* overflow-x: auto; */
-    /* white-space: nowrap; */
+    /* overflow-x: auto;
+    white-space: nowrap; */
 }
 
 .content-wrapper {
