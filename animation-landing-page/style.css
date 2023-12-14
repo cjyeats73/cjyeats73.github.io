@@ -41,9 +41,13 @@ body {
     transform: translateX(-50%) translateY(-50%);
 }
 .description {
+    top: 45%;
+    left: -15%;
     transform: translateX(180px) translateY(625px);
 }
 .stinger {
+    top: 55%;
+    left: -15%;
     transform: translateX(180px) translateY(650px);
 }
 .menu {
@@ -188,22 +192,30 @@ body {
     .beginText {
         font-size: 17px; /* Adjust the font size for smaller screens */
     }
+
+    .description {
+        font-size: 12px;
+    }
 }
 
 /* Adjust font size for even smaller screens */
 @media (max-width: 1000px) {
     .beginText {
-        font-size: 12px; /* Further adjust the font size for very small screens */
+        font-size: 8px; /* Further adjust the font size for very small screens */
+    }
+
+    .description {
+        font-size: 50px;
     }
 }
 
 /* CSS for artists' picture */
 .ericHead{
-    width: 300px;
+    width: 20%;
     height: auto;
     position: absolute;
-    top: 90px;
-    left: 180px;
+    top: 10%;
+    left: 15%;
     opacity: 0; /* Start hidden */
     transform: translateX(20px);
     transition: opacity 0.5s ease, transform 0.5s ease; 
@@ -215,11 +227,11 @@ body {
 }
 
 .shelHead{
-    width: 320px;
+    width: 20%;
     height: auto;
     position: absolute;
-    top: 90px;
-    left: 180px;
+    top: 10%;
+    left: 15%;
     opacity: 0; /* Start hidden */
     transform: translateX(20px);
     transition: opacity 0.5s ease, transform 0.5s ease; 
@@ -231,11 +243,11 @@ body {
 }
 
 .beatrixHead{
-    width: 300px;
+    width: 20%;
     height: auto;
     position: absolute;
-    top: 90px;
-    left: 180px;
+    top: 10%;
+    left: 15%;
     opacity: 0; /* Start hidden */
     transform: translateX(20px);
     transition: opacity 0.5s ease, transform 0.5s ease; 
@@ -247,11 +259,11 @@ body {
 }
 
 .donHead{
-    width: 420px;
+    width: 25%;
     height: auto;
     position: absolute;
-    top: 90px;
-    left: 180px;
+    top: 10%;
+    left: 15%;
     opacity: 0; /* Start hidden */
     transform: translateX(20px);
     transition: opacity 0.5s ease, transform 0.5s ease; 
@@ -263,11 +275,11 @@ body {
 }
 
 .talithaHead{
-    width: 300px;
+    width: 20%;
     height: auto;
     position: absolute;
-    top: 90px;
-    left: 180px;
+    top: 10%;
+    left: 17%;
     opacity: 0; /* Start hidden */
     transform: translateX(20px);
     transition: opacity 0.5s ease, transform 0.5s ease; 
@@ -280,43 +292,43 @@ body {
 
 /* CSS for artists' name. */
 #ericName{
-    width: 1000px;
+    width: 75%;
     height: auto;
     position: absolute;
-    top:  170px;
-    left: -170px;
+    top:  15%;
+    left: -12%;
 }
 
 #shelName{
-    width: 1000px;
+    width: 75%;
     height: auto;
     position: absolute;
-    top:  170px;
-    left: -150px;
+    top:  8%;
+    left: -12%;
 }
 
 #beaName{
-    width: 1000px;
+    width: 75%;
     height: auto;
     position: absolute;
-    top:  170px;
-    left: -150px;
+    top:  12%;
+    left: -11.25%;
 }
 
 #donName{
-    width: 1000px;
+    width: 75%;
     height: auto;
     position: absolute;
-    top:  170px;
-    left: -120px;
+    top:  7%;
+    left: -10%;
 }
 
 #talName{
-    width: 1000px;
+    width: 75%;
     height: auto;
     position: absolute;
-    top:  170px;
-    left: -200px;
+    top:  11%;
+    left: -11.50%;
 }
 
  /* CSS for butterfly  cursor */
