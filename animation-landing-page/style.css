@@ -574,11 +574,11 @@ body {
 @keyframes upDown {
     0% {
         opacity: 0.3;
-        transform: translateY(0px); /* Example transformation */
+        transform: translateY(0px); 
     }
     50% {
         opacity: 1;
-        transform: translateY(-40px); /* Example transformation */
+        transform: translateY(-40px); 
     }
     100% {
         opacity: 0.3;
