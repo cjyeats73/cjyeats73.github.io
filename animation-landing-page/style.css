@@ -40,16 +40,7 @@ body {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
-.description {
-    top: 45%;
-    left: -15%;
-    transform: translateX(180px) translateY(625px);
-}
-.stinger {
-    top: 55%;
-    left: -15%;
-    transform: translateX(180px) translateY(650px);
-}
+
 .menu {
     width: 10vw;
     height: 300vh;
@@ -192,10 +183,6 @@ body {
     .beginText {
         font-size: 17px; /* Adjust the font size for smaller screens */
     }
-
-    .description {
-        font-size: 12px;
-    }
 }
 
 /* Adjust font size for even smaller screens */
@@ -203,19 +190,15 @@ body {
     .beginText {
         font-size: 8px; /* Further adjust the font size for very small screens */
     }
-
-    .description {
-        font-size: 50px;
-    }
 }
 
 /* CSS for artists' picture */
 .ericHead{
-    width: 20%;
-    height: auto;
+    width: 20vw;
+    height: 50vh;
     position: absolute;
-    top: 10%;
-    left: 15%;
+    top: 10vh;
+    left: 15vw;
     opacity: 0; /* Start hidden */
     transform: translateX(20px);
     transition: opacity 0.5s ease, transform 0.5s ease; 
@@ -227,11 +210,11 @@ body {
 }
 
 .shelHead{
-    width: 20%;
-    height: auto;
+    width: 20vw;
+    height: 50vh;
     position: absolute;
-    top: 10%;
-    left: 15%;
+    top: 10vh;
+    left: 15vw;
     opacity: 0; /* Start hidden */
     transform: translateX(20px);
     transition: opacity 0.5s ease, transform 0.5s ease; 
@@ -243,11 +226,11 @@ body {
 }
 
 .beatrixHead{
-    width: 20%;
-    height: auto;
+    width: 20vw;
+    height: 50vh;
     position: absolute;
-    top: 10%;
-    left: 15%;
+    top: 10vh;
+    left: 15vw;
     opacity: 0; /* Start hidden */
     transform: translateX(20px);
     transition: opacity 0.5s ease, transform 0.5s ease; 
@@ -259,11 +242,11 @@ body {
 }
 
 .donHead{
-    width: 25%;
-    height: auto;
+    width: 20vw;
+    height: 50vh;
     position: absolute;
-    top: 10%;
-    left: 15%;
+    top: 10vh;
+    left: 15vw;
     opacity: 0; /* Start hidden */
     transform: translateX(20px);
     transition: opacity 0.5s ease, transform 0.5s ease; 
@@ -275,11 +258,11 @@ body {
 }
 
 .talithaHead{
-    width: 20%;
-    height: auto;
+    width: 20vw;
+    height: 50vh;
     position: absolute;
-    top: 10%;
-    left: 17%;
+    top: 10vh;
+    left: 15vw;
     opacity: 0; /* Start hidden */
     transform: translateX(20px);
     transition: opacity 0.5s ease, transform 0.5s ease; 
@@ -292,43 +275,43 @@ body {
 
 /* CSS for artists' name. */
 #ericName{
-    width: 75%;
-    height: auto;
+    width: 130vw;
+    height: 80vh;
     position: absolute;
-    top:  15%;
-    left: -12%;
+    top: 25vh;
+    left: -40vw;
 }
 
 #shelName{
-    width: 75%;
-    height: auto;
+    width: 130vw;
+    height: 80vh;
     position: absolute;
-    top:  8%;
-    left: -12%;
+    top: 25vh;
+    left: -40vw;
 }
 
 #beaName{
-    width: 75%;
-    height: auto;
+    width: 130vw;
+    height: 80vh;
     position: absolute;
-    top:  12%;
-    left: -11.25%;
+    top: 25vh;
+    left: -39vw;
 }
 
 #donName{
-    width: 75%;
-    height: auto;
+    width: 130vw;
+    height: 80vh;
     position: absolute;
-    top:  7%;
-    left: -10%;
+    top: 25vh;
+    left: -40vw;
 }
 
 #talName{
-    width: 75%;
-    height: auto;
+    width: 130vw;
+    height: 80vh;
     position: absolute;
-    top:  11%;
-    left: -11.50%;
+    top: 25vh;
+    left: -42vw;
 }
 
  /* CSS for butterfly  cursor */
@@ -383,9 +366,26 @@ body {
 }
 
 .description{
+    top: 2vh;
+    left: 0vw;
+    position:absolute;
+    transform: translateX(180px) translateY(625px);
     font-family: "Lucida Console", "Courier New", monospace;
     font-size: 18px;
     font-weight: bold;
+}
+
+@media (max-width: 1300px) {
+    .description {
+        font-size: 15px; /* Adjust the font size for smaller screens */
+    }
+}
+
+/* Adjust font size for even smaller screens */
+@media (max-width: 1000px) {
+    .description {
+        font-size: 12px; /* Further adjust the font size for very small screens */
+    }
 }
 
 /* imgae slide! */
@@ -538,10 +538,10 @@ body {
 
 .chicken {
     position: absolute;
-    top: 760px;
-    left: 10px;
-    width: 150px;
-    height: 150px;
+    top: 82vh;
+    left: -10vw;
+    width: 10vw;
+    height: 15vh;
 }
 
 /* this is the flower */
