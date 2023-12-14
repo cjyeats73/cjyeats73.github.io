@@ -36,8 +36,6 @@ body {
     font-size: 150px;
     color:black;
     position: absolute;
-    top: 50%;
-    left: 50%;
     transform: translateX(-50%) translateY(-50%);
 }
 
@@ -366,13 +364,12 @@ body {
 }
 
 .description{
-    top: 2vh;
-    left: 0vw;
-    position:absolute;
-    transform: translateX(180px) translateY(625px);
+    position: absolute;
     font-family: "Lucida Console", "Courier New", monospace;
-    font-size: 18px;
+    font-size: 1vw;
     font-weight: bold;
+    top: 72%;
+    left: 13%;
 }
 
 @media (max-width: 1300px) {
@@ -566,8 +563,8 @@ body {
     position: absolute;
     top: -300px;
     left: 150px;
-    width: 1000px;
-    height: 1000px;
+    width: 20%;
+    height: auto;
     z-index: -100;
     animation: upDown 2s ease-in-out infinite; /* Animation duration and fill mode */
 }
