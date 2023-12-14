@@ -12,6 +12,8 @@
 //     }, { passive: false }); // Ensure the event is not treated as passive
 // });
 
+
+//this is the butterfly
 let isButterflyOne = true;
 let canSwitch = true; // New flag to control the switch
 let switchDelay = 350; // Delay in milliseconds (500ms = 0.5 seconds)
@@ -19,8 +21,9 @@ let switchDelay = 350; // Delay in milliseconds (500ms = 0.5 seconds)
 document.addEventListener('mousemove', function(e) {
     var butterfly = document.getElementById('butterflyCursor');
     butterfly.style.display = 'block';
-    butterfly.style.left = (e.pageX - 260) + 'px';
+    butterfly.style.left = (e.pageX - 200) + 'px';
     butterfly.style.top = e.pageY + 'px';
+    //e.pageX and e.pageY give the current mouse coordinates. The butterfly's left position is offset by 260 pixels from the mouse's X coordinate.
 
     if (canSwitch) {
         if (isButterflyOne) {
@@ -30,15 +33,17 @@ document.addEventListener('mousemove', function(e) {
         }
         isButterflyOne = !isButterflyOne;
 
-        canSwitch = false; // Prevent further switches
+        canSwitch = false; // Prevent further switches until the timeout is over
         setTimeout(function() { 
-            canSwitch = true; // Allow switching after the delay
+            canSwitch = true; // Allow switching after the delay, set it back to true
         }, switchDelay);
     }
 });
 
+
+//this is the image slider
 document.addEventListener('DOMContentLoaded', function () {
-    let currentIndex = 0;
+    let currentIndex = 0; //keep track of the current image being displayed in the slideshow
     let slideshowInterval;
     const images = document.querySelectorAll('.image-slide1');
     const totalImages = images.length;
@@ -66,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function stopSlideshow() {
-        clearInterval(slideshowInterval);
+        clearInterval(slideshowInterval); //stops the interval timer, effectively pausing the slide show
     }
 
     // Start the slideshow
@@ -248,6 +253,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+//path animation
 document.addEventListener('DOMContentLoaded', function () {
   const paths = document.querySelectorAll('.st30');
   let delay = 0;
@@ -261,6 +267,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+//play the audio when you click the screen
 window.addEventListener('click', ()=>{
   document.getElementById("audio").play();
 });
@@ -272,11 +279,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function revealOnScroll() {
       const windowWidth = window.innerWidth;
-      const imageLeft = ericHead.getBoundingClientRect().left;
-      const imageVisible = 150; // Amount of the image that needs to be visible
+      const imageLeft = ericHead.getBoundingClientRect().left; //Retrieves the left position of the ericHead element relative to the viewport
+      const imageVisible = 150; // Amount of the image(in pixels) that needs to be visible
 
       if (imageLeft < windowWidth - imageVisible) {
           ericHead.classList.add('revealed');
+          //If the left edge of the ericHead element is within 150 pixels of the right edge of the viewport (windowWidth - imageVisible), the condition is true, and the first block of code is executed.
       } else {
           ericHead.classList.remove('revealed');
       }
@@ -360,7 +368,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Chicken move
 document.addEventListener('DOMContentLoaded', function() {
-    let showingStart = true;
+    let showingStart = true; //track which element is being shown
     const chickenStart = document.getElementById('chickenStart');
     const chickenFinish = document.getElementById('chickenFinish');
     let moveDistance = 0;
