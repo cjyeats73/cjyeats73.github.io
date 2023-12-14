@@ -78,8 +78,7 @@ body {
 .gallery.two {
     background-color: #FFF4CA;
     flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center-align the images */
-    justify-content: space-around; /* Distribute space around the images */
+    text-align: center; /* Center-align the images */
     gap: 70px; /* Add gap between images */
     overflow: hidden;
 }
@@ -88,6 +87,8 @@ body {
     width: 70%; /* Adjust the width as per your requirement */
     height: auto; /* Maintain the aspect ratio of the images */
     border: 15px solid #9ad49d; 
+    display: inline-block;
+    vertical-align: 50%; /* aligns to the CENTER of the image */
     /* transition: slideUp 1s ease-in-out infinite 0s; */
 }
 
@@ -161,8 +162,8 @@ body {
     position:absolute;
     top: -230px;
     left: -130px;
-    width: 1300px;
-    height: 1200px
+    width: 25%;
+    height: auto;
 }
 .all-things{
     position:absolute;
