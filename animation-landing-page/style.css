@@ -544,18 +544,18 @@ body {
 /* this is the flower */
 .flower1{
     position: absolute;
-    top: 760px;
-    left: 100px;
-    width: 150px;
-    height: 150px;
+    top: 80vh;
+    left: 5vw;
+    width: 15vw;
+    height: 20vh;
 }
 
 .flower2{
     position: absolute;
-    top: 760px;
-    left: 500px;
-    width: 150px;
-    height: 150px;
+    top: 82vh;
+    left: 40vw;
+    width: 10vw;
+    height: 15vh;
 }
 
 /* this is the cloud */
